@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Table from './components/table.tsx'
 import { ChakraBaseProvider, extendBaseTheme } from '@chakra-ui/react'
+import {App} from "./app.tsx"
 
 const theme = extendBaseTheme({
   styles: {
@@ -17,7 +17,7 @@ const theme = extendBaseTheme({
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ChakraBaseProvider theme={theme}>
-      <Table lines={14} columns={14} bombs={40} />
+      <App />
     </ChakraBaseProvider>
   </React.StrictMode>,
 )
